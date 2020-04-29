@@ -11,7 +11,7 @@ public class Calcu extends JFrame{
         // asdadsada perra perrita
 	JTextField marco;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular;
-
+        // oliwis
 	public Calcu(){
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
