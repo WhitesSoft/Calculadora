@@ -18,7 +18,7 @@ public class Calcu extends JFrame{
 		setTitle("Calculadora");
 		//setIconImage(new ImageIcon(getClass().getResource("images/calculadora.png")).getImage());
 	}
-
+            //jsakbsdjkandak
 	public static void main(String[] args) {
 		Calcu principal = new Calcu();
 		principal.setBounds(0,0,600,600);
