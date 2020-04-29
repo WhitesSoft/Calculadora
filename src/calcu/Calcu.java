@@ -8,7 +8,7 @@ import javax.swing.*;
 
 
 public class Calcu extends JFrame{
-
+        // asdadsada
 	JTextField marco;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular;
 
