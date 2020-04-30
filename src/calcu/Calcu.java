@@ -12,7 +12,8 @@ public class Calcu extends JFrame implements ActionListener{
         // asdadsada perra perrita
 	JTextField pantalla;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, suma, resta, multiplicacion, division, borrar;
-        // oliwis
+        String L="";
+// oliwis
 	public Calcu(){
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -126,6 +127,12 @@ public class Calcu extends JFrame implements ActionListener{
         
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == uno){
+                int N=1;
+                L +="1";
+                pantalla.setText(L);
+            }
+        
         
     }
 
