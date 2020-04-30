@@ -61,11 +61,11 @@ public class Calcu extends JFrame implements ActionListener{
                 cinco.setFont(new Font("Andale Mono", 0, 18));
                 add(cinco);
                 
-                nueve = new JButton("6");
-                nueve.setBounds(310,255,110,70);
-                nueve.addActionListener(this);
-                nueve.setFont(new Font("Andale Mono", 0, 18));
-                add(nueve);
+                seis = new JButton("6");
+                seis.setBounds(310,255,110,70);
+                seis.addActionListener(this);
+                seis.setFont(new Font("Andale Mono", 0, 18));
+                add(seis);
                 
                 resta = new JButton("-");
                 resta.setBounds(445,255,110,70);
@@ -128,11 +128,41 @@ public class Calcu extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == uno){
-                int N=1;
                 L +="1";
                 pantalla.setText(L);
             }
-        
+        if(e.getSource() == dos){
+                L +="2";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == tres){
+                L +="3";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == cuatro){
+                L +="4";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == cinco){
+                L +="5";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == seis){
+                L +="6";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == siete){
+                L +="7";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == ocho){
+                L +="8";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == nueve){
+                L +="9";
+                pantalla.setText(L);
+            }
         
     }
 
