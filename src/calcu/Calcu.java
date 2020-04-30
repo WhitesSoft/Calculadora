@@ -8,13 +8,11 @@ import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.*;
 
-
-
 public class Calcu extends JFrame implements ActionListener{
- 
+        // asdadsada perra perrita
 	JTextField pantalla;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, suma, resta, multiplicacion, division, borrar;
-
+        // oliwis
 	public Calcu(){
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
