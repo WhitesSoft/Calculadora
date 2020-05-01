@@ -167,37 +167,43 @@ public class Calcu extends JFrame implements ActionListener{
             pantalla.setText("");
             }
         }
-        //
+        if(e.getSource() == cero){
+                pantalla.setText(pantalla.getText()+"0");
+            } 
         if(e.getSource() == uno){
-                pantalla.setText(L+"1");
+                pantalla.setText(pantalla.getText()+"1");
             }
         if(e.getSource() == dos){
-                pantalla.setText(L+"2");
+                pantalla.setText(pantalla.getText()+"2");
             }
         if(e.getSource() == tres){
-                pantalla.setText(L+"3");
+                pantalla.setText(pantalla.getText()+"3");
             }
         if(e.getSource() == cuatro){
-                pantalla.setText(L+"4");
+                pantalla.setText(pantalla.getText()+"4");
             }
         if(e.getSource() == cinco){
-                pantalla.setText(L+"5");
+                pantalla.setText(pantalla.getText()+"5");
             }
         if(e.getSource() == seis){
-                pantalla.setText(L+"6");
+                pantalla.setText(pantalla.getText()+"6");
             }
         if(e.getSource() == siete){
-                pantalla.setText(L+"7");
+                pantalla.setText(pantalla.getText()+"7");
             }
         if(e.getSource() == ocho){
-                pantalla.setText(L+"8");
+                pantalla.setText(pantalla.getText()+"8");
             }
         if(e.getSource() == nueve){
-                pantalla.setText(L+"9");
-            }
-        
+                pantalla.setText(pantalla.getText()+"9");
+            }        
+        if(e.getSource() == borrar){            
+            pantalla.setText(pantalla.getText().replaceFirst(".$",""));
+            } 
     }
-    
+    private static String removeLastChar(String str) {
+        return str.substring(0, str.length() - 1);
+    }
     public static String op(String num,String num1,String signo){
         float resul = 0 ;
         String resultado;
@@ -205,13 +211,13 @@ public class Calcu extends JFrame implements ActionListener{
             resul=Float.parseFloat(num)+Float.parseFloat(num1);
         }
         if(signo.equals("-")){
-            resul=Float.parseFloat(num)-Float.parseFloat(num1);
+            resul=Float.parseFloat(num1)-Float.parseFloat(num);
         }
         if(signo.equals("*")){
             resul=Float.parseFloat(num)*Float.parseFloat(num1);
         }
         if(signo.equals("/")){
-            resul=Float.parseFloat(num)/Float.parseFloat(num1);
+            resul=Float.parseFloat(num1)/Float.parseFloat(num);
         }
         
         resultado = Float.toString(resul);
