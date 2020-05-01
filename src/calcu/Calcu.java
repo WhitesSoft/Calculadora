@@ -206,6 +206,7 @@ public class Calcu extends JFrame implements ActionListener{
             }
         
     }
+    
     public static String op(String num,String num1,String signo){
         float resul = 0 ;
         String resultado;
@@ -221,6 +222,7 @@ public class Calcu extends JFrame implements ActionListener{
         if(signo.equals("/")){
             resul=Float.parseFloat(num)/Float.parseFloat(num1);
         }
+        
         resultado = Float.toString(resul);
         return resultado;
     }
