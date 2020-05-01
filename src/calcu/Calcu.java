@@ -1,28 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package calcu;
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.*;
 
 public class Calcu extends JFrame implements ActionListener{
-        // asdadsada perra perrita
+
 	JTextField pantalla;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, suma, resta, multiplicacion, division, borrar;
-        // oliwis
+       String L="";
+
 	public Calcu(){
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Calculadora");
-		//setIconImage(new ImageIcon(getClass().getResource("images/calculadora.png")).getImage());
+		getContentPane().setBackground(new Color(44, 62, 80));
                 
                 pantalla = new JTextField();
-		pantalla.setBounds(40,40,520,80);
-		pantalla.setFont(new Font("Andale Mono", 0, 18));
-		add(pantalla);
+		    pantalla.setBounds(40,40,520,80);
+		    pantalla.setFont(new Font("Andale Mono", 0, 18));
+		    add(pantalla);
                 
                 siete = new JButton("7");
                 siete.setBounds(40,160,110,70);
@@ -60,11 +58,11 @@ public class Calcu extends JFrame implements ActionListener{
                 cinco.setFont(new Font("Andale Mono", 0, 18));
                 add(cinco);
                 
-                nueve = new JButton("6");
-                nueve.setBounds(310,255,110,70);
-                nueve.addActionListener(this);
-                nueve.setFont(new Font("Andale Mono", 0, 18));
-                add(nueve);
+                seis = new JButton("6");
+                seis.setBounds(310,255,110,70);
+                seis.addActionListener(this);
+                seis.setFont(new Font("Andale Mono", 0, 18));
+                add(seis);
                 
                 resta = new JButton("-");
                 resta.setBounds(445,255,110,70);
@@ -120,12 +118,51 @@ public class Calcu extends JFrame implements ActionListener{
                 calcular.addActionListener(this);
                 calcular.setFont(new Font("Andale Mono", 0, 18));
                 add(calcular);
-                    
-                
+                                   
 	}
         
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == uno){
+                L +="1";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == dos){
+                L +="2";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == tres){
+                L +="3";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == cuatro){
+                L +="4";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == cinco){
+                L +="5";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == seis){
+                L +="6";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == siete){
+                L +="7";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == ocho){
+                L +="8";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == nueve){
+                L +="9";
+                pantalla.setText(L);
+            }
+        if(e.getSource() == cero){
+                L +="0";
+                pantalla.setText(L);
+            }
         
     }
 
