@@ -1,30 +1,27 @@
-
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.asd
+ */
 package calcu;
-import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.*;
 
 public class Calcu extends JFrame implements ActionListener{
-
-
 	JTextField pantalla;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, suma, resta, multiplicacion, division, borrar;
-       String L="";
-
-
+        String L="",num,num1,signo;
 	public Calcu(){
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Calculadora");
-		getContentPane().setBackground(new Color(44, 62, 80));
+		//setIconImage(new ImageIcon(getClass().getResource("images/calculadora.png")).getImage());
                 
                 pantalla = new JTextField();
-		    pantalla.setBounds(40,40,520,80);
-		    pantalla.setFont(new Font("Andale Mono", 0, 18));
-		    add(pantalla);
-
+		pantalla.setBounds(40,40,520,80);
+		pantalla.setFont(new Font("Andale Mono", 0, 18));
+		add(pantalla);
                 
                 siete = new JButton("7");
                 siete.setBounds(40,160,110,70);
@@ -122,11 +119,53 @@ public class Calcu extends JFrame implements ActionListener{
                 calcular.addActionListener(this);
                 calcular.setFont(new Font("Andale Mono", 0, 18));
                 add(calcular);
-                                   
+                    
+                
 	}
         
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == calcular){
+            String resultado;
+            num1=pantalla.getText(); 
+      
+            if (!num1.equals("")) {
+                resultado=op(num1,num,signo);
+                pantalla.setText(resultado);
+            }
+        
+            
+        }
+        if(e.getSource() == suma){
+            if (!pantalla.getText().equals("")) {
+                num = pantalla.getText();
+                signo="+";
+                pantalla.setText("");
+            }
+        }
+        if(e.getSource() == resta){
+            if (!pantalla.getText().equals("")) {
+            num =pantalla.getText();
+            signo="-";
+            pantalla.setText("");
+            }
+        }
+        if(e.getSource() == multiplicacion){
+           
+            if (!pantalla.getText().equals("")) {
+            num =pantalla.getText();
+            signo="*";
+            pantalla.setText("");
+            }
+        }
+        if(e.getSource() == division){
+            if (!pantalla.getText().equals("")) {
+            num =pantalla.getText();
+            signo="/";
+            pantalla.setText("");
+            }
+        }
+        //
         if(e.getSource() == uno){
                 L +="1";
                 pantalla.setText(L);
@@ -163,13 +202,26 @@ public class Calcu extends JFrame implements ActionListener{
                 L +="9";
                 pantalla.setText(L);
             }
-        if(e.getSource() == cero){
-                L +="0";
-                pantalla.setText(L);
-            }
         
     }
-
+    public static String op(String num,String num1,String signo){
+        float resul = 0 ;
+        String resultado;
+        if(signo.equals("+")){
+            resul=Float.parseFloat(num)+Float.parseFloat(num1);
+        }
+        if(signo.equals("-")){
+            resul=Float.parseFloat(num)-Float.parseFloat(num1);
+        }
+        if(signo.equals("*")){
+            resul=Float.parseFloat(num)*Float.parseFloat(num1);
+        }
+        if(signo.equals("/")){
+            resul=Float.parseFloat(num)/Float.parseFloat(num1);
+        }
+        resultado = Float.toString(resul);
+        return resultado;
+    }
 	public static void main(String[] args) {
 		Calcu principal = new Calcu();
 		principal.setBounds(0,0,600,600);
