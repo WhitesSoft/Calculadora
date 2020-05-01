@@ -1,29 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 package calcu;
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.*;
 
 public class Calcu extends JFrame implements ActionListener{
-        // asdadsada perra perrita
+
+
 	JTextField pantalla;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, suma, resta, multiplicacion, division, borrar;
-        String L="";
-// oliwis
+       String L="";
+
+
 	public Calcu(){
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Calculadora");
-		//setIconImage(new ImageIcon(getClass().getResource("images/calculadora.png")).getImage());
+		getContentPane().setBackground(new Color(44, 62, 80));
                 
                 pantalla = new JTextField();
-		pantalla.setBounds(40,40,520,80);
-		pantalla.setFont(new Font("Andale Mono", 0, 18));
-		add(pantalla);
+		    pantalla.setBounds(40,40,520,80);
+		    pantalla.setFont(new Font("Andale Mono", 0, 18));
+		    add(pantalla);
+
                 
                 siete = new JButton("7");
                 siete.setBounds(40,160,110,70);
