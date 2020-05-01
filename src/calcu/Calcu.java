@@ -121,8 +121,7 @@ public class Calcu extends JFrame implements ActionListener{
                 calcular.addActionListener(this);
                 calcular.setFont(new Font("Andale Mono", 0, 18));
                 add(calcular);
-                    
-                
+                                   
 	}
         
     @Override
