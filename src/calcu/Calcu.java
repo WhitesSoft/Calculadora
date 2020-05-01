@@ -4,6 +4,7 @@
  * and open the template in the editor.asd
  */
 package calcu;
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.*;
@@ -16,6 +17,7 @@ public class Calcu extends JFrame implements ActionListener{
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Calculadora");
+                getContentPane().setBackground(new Color(44, 62, 80));
 		//setIconImage(new ImageIcon(getClass().getResource("images/calculadora.png")).getImage());
                 
                 pantalla = new JTextField();
