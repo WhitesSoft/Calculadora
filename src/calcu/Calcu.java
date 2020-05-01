@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Calcu extends JFrame implements ActionListener{
+    //xd
 	JTextField pantalla;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, suma, resta, multiplicacion, division, borrar;
         String L="",num,num1,signo;
