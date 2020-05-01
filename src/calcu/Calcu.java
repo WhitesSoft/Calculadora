@@ -1,4 +1,5 @@
 
+
 package calcu;
 import java.awt.Color;
 import java.awt.Font;
@@ -7,9 +8,11 @@ import java.awt.event.*;
 
 public class Calcu extends JFrame implements ActionListener{
 
+
 	JTextField pantalla;
 	JButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, suma, resta, multiplicacion, division, borrar;
        String L="";
+
 
 	public Calcu(){
 		setLayout(null);
@@ -21,6 +24,7 @@ public class Calcu extends JFrame implements ActionListener{
 		    pantalla.setBounds(40,40,520,80);
 		    pantalla.setFont(new Font("Andale Mono", 0, 18));
 		    add(pantalla);
+
                 
                 siete = new JButton("7");
                 siete.setBounds(40,160,110,70);
