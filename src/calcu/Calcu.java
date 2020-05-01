@@ -162,6 +162,10 @@ public class Calcu extends JFrame implements ActionListener{
                 L +="9";
                 pantalla.setText(L);
             }
+        if(e.getSource() == cero){
+                L +="0";
+                pantalla.setText(L);
+            }
         
     }
 
