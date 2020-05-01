@@ -169,40 +169,31 @@ public class Calcu extends JFrame implements ActionListener{
         }
         //
         if(e.getSource() == uno){
-                L +="1";
-                pantalla.setText(L);
+                pantalla.setText(L+"1");
             }
         if(e.getSource() == dos){
-                L +="2";
-                pantalla.setText(L);
+                pantalla.setText(L+"2");
             }
         if(e.getSource() == tres){
-                L +="3";
-                pantalla.setText(L);
+                pantalla.setText(L+"3");
             }
         if(e.getSource() == cuatro){
-                L +="4";
-                pantalla.setText(L);
+                pantalla.setText(L+"4");
             }
         if(e.getSource() == cinco){
-                L +="5";
-                pantalla.setText(L);
+                pantalla.setText(L+"5");
             }
         if(e.getSource() == seis){
-                L +="6";
-                pantalla.setText(L);
+                pantalla.setText(L+"6");
             }
         if(e.getSource() == siete){
-                L +="7";
-                pantalla.setText(L);
+                pantalla.setText(L+"7");
             }
         if(e.getSource() == ocho){
-                L +="8";
-                pantalla.setText(L);
+                pantalla.setText(L+"8");
             }
         if(e.getSource() == nueve){
-                L +="9";
-                pantalla.setText(L);
+                pantalla.setText(L+"9");
             }
         
     }
